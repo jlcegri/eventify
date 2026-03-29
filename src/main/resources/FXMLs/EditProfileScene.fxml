@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox alignment="CENTER" maxHeight="600.0" maxWidth="1030.0" prefHeight="600.0" prefWidth="1030.0" style="-fx-background-color: WHITE;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controllers.EditProfileController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="150.0" right="150.0" />
+   </padding>
+   <children>
+      <VBox fx:id="Binding0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="11.0" prefWidth="600.0">
+               <children>
+                  <Circle fx:id="progressID1" fill="DODGERBLUE" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="currentStepsSHOW">
+                     <HBox.margin>
+                        <Insets left="1.5" right="2.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fx:id="progressID2" fill="#d6d6d680" layoutX="310.0" layoutY="15.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="nextStepsSHOW">
+                     <HBox.margin>
+                        <Insets left="1.5" right="2.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fx:id="progressID3" fill="DODGERBLUE" layoutX="315.0" layoutY="15.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="nextStepsSHOW">
+                     <HBox.margin>
+                        <Insets left="1.5" right="2.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Circle fx:id="progressID4" fill="DODGERBLUE" layoutX="320.0" layoutY="15.0" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="nextStepsSHOW">
+                     <HBox.margin>
+                        <Insets left="1.5" right="1.5" />
+                     </HBox.margin>
+                  </Circle>
+               </children>
+            </HBox>
+            <TextFlow prefHeight="19.0" prefWidth="600.0" textAlignment="CENTER">
+               <children>
+                  <Label style="-fx-font-weight: 900; -fx-font-size: 15px;" text="Step " />
+                  <Label fx:id="progressID0" style="-fx-font-weight: 900; -fx-font-size: 15px;" text="1 ">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label style="-fx-font-weight: 900; -fx-font-size: 15px;" text="of 4" />
+               </children>
+            </TextFlow>
+            <VBox alignment="TOP_CENTER" prefHeight="213.0" prefWidth="600.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle radius="25.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);" />
+                        <SVGPath fx:id="svgEditP" content="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0 M15 10 a 3 3 0 1 1 -6 0 a 3 3 0 1 1 6 0" fill="TRANSPARENT" scaleX="1.2" scaleY="1.2" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0" />
+                     </children>
+                  </StackPane>
+                  <Label fx:id="titleEditP" style="-fx-font-weight: 900; -fx-font-size: 20px;" text="Where are you located?" />
+                  <Label fx:id="subtitleEditP" style="-fx-font-size: 13px; -fx-text-fill: #636a75; -fx-font-weight: 500;" text="Help us find amazing events in your area">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <GridPane fx:id="gridOpt">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" percentHeight="9.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <StackPane maxHeight="1.7976931348623157E308" maxWidth="600.0" prefHeight="1000.0" GridPane.halignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="locArea" alignment="CENTER" disable="true" prefHeight="40.0" promptText="Enter your City or address" styleClass="my-double-border" visible="false" />
+                                    <FlowPane fx:id="eventTypes" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                                    <TextArea fx:id="bioArea" disable="true" onKeyTyped="#handleInteractionTArea" prefHeight="200.0" prefWidth="200.0" styleClass="my-double-border" visible="false" wrapText="true" />
+                                    <FlowPane fx:id="interestsOptions" prefHeight="200.0" prefWidth="200.0">
+                                       <StackPane.margin>
+                                          <Insets top="10.0" />
+                                       </StackPane.margin>
+                                    </FlowPane>
+                                 </children>
+                              </StackPane>
+                              <Label fx:id="selectedLabel" alignment="CENTER" disable="true" style="-fx-text-fill: #636a75; -fx-font-size: 13px; -fx-font-weight: 600;" text="Selected: 0 interests" textAlignment="CENTER" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets top="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <GridPane fx:id="Binding1" alignment="CENTER" maxWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stepBackward" prefHeight="40.0" prefWidth="70.0" styleClass="back-button" textAlignment="RIGHT" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <graphic>
+                  <TextFlow prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="m15 18-6-6 6-6" fill="TRANSPARENT" stroke="#894eef80" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0" translateY="2.0" />
+                        <Label fx:id="backButtonLabel" style="-fx-font-weight: 900;" text="Back" textFill="#864eed7f" translateY="-1.0">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="3.0" top="3.0" />
+                     </padding>
+                  </TextFlow>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="continueButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stepForward" styleClass="continue-button" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <graphic>
+                  <TextFlow prefHeight="22.0" prefWidth="133.0" textAlignment="RIGHT">
+                     <children>
+                        <Label fx:id="continueButtonLabel" alignment="CENTER" prefHeight="17.0" prefWidth="119.0" style="-fx-font-weight: 900;" text="Continue" textAlignment="CENTER" textFill="WHITE">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                        </Label>
+                        <SVGPath content="m9 18 6-6-6-6" fill="TRANSPARENT" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0" translateY="3.0" />
+                     </children>
+                     <padding>
+                        <Insets right="3.0" top="3.0" />
+                     </padding>
+                  </TextFlow>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

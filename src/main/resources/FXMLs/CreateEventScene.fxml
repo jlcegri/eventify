@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+<?import org.controlsfx.control.SegmentedButton?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1030.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);" stylesheets="@../style.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controllers.EventCreationController">
+    <content>
+        <AnchorPane>
+            <children>
+                <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <VBox style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);">
+                            <padding>
+                                <Insets bottom="25.0" left="100.0" right="100.0" />
+                            </padding>
+                            <children>
+                                <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="40.0" styleClass="iteractive-buttons-create" textAlignment="CENTER">
+                                    <graphic>
+                                        <TextFlow maxHeight="-Infinity" prefHeight="17.333333333" textAlignment="CENTER" translateY="2.0">
+                                            <children>
+                                                <SVGPath content="m12 19-7-7 7-7 M19 12H5" fill="TRANSPARENT" scaleX="0.7" scaleY="0.7" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0" styleClass="iteractive-buttons-create" />
+                                                <Label alignment="CENTER" graphicTextGap="0.0" styleClass="iteractive-buttons-create-label" text="Back to Discover Events" textAlignment="CENTER" textFill="#ffffff4c" translateY="-4.0">
+                                                    <padding>
+                                                        <Insets left="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </TextFlow>
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Label style="-fx-font-size: 28px; -fx-font-weight: 900; -fx-text-fill: white;" text="Create New Event">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </Label>
+                                <Label layoutX="160.0" layoutY="60.0" opacity="0.75" style="-fx-font-size: 15px; -fx-font-weight: 500; -fx-text-fill: white;" text="Share your event with the community">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets right="-1.0" />
+                            </VBox.margin>
+                        </VBox>
+                        <StackPane fx:id="stackRequiredLabels" alignment="TOP_LEFT">
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="100.0" right="100.0" top="25.0" />
+                            </VBox.margin>
+                            <children>
+                                <VBox styleClass="box-border">
+                                    <children>
+                                        <Label alignment="CENTER" lineSpacing="2.5" style="-fx-font-weight: 700; -fx-background-size: 20%; -fx-font-family: ui-sans-serif,system-ui,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,Segoe UI Symbol,&quot;Noto Color Emoji&quot;; -fx-font-size: 26px;" text="Event Details" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true">
+                                            <font>
+                                                <Font size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label lineSpacing="2.5" style="-fx-font-family: ui-sans-serif,system-ui,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,Segoe UI Symbol,&quot;Noto Color Emoji&quot;; -fx-font-size: 14px;" text="Fill in the information about your event. Fields marked with * are required." textAlignment="CENTER" textFill="#636a75" textOverrun="LEADING_ELLIPSIS" wrapText="true">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <VBox>
+                                            <children>
+                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Event Title *">
+                                                    <VBox.margin>
+                                                        <Insets bottom="1.0" left="5.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                                <TextField fx:id="eventTitle" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" promptText="e.g., Photography Workshop" styleClass="my-double-border">
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </TextField>
+                                                <Label fx:id="tittleErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                    <VBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="15.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox>
+                                            <children>
+                                                <GridPane>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="96.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Date *">
+                                                                    <padding>
+                                                                        <Insets bottom="1.0" left="5.0" />
+                                                                    </padding>
+                                                                    <graphic>
+                                                                        <SVGPath content="M8 2v4 M16 2v4 M5 4 H19 A2 2 0 0 1 21 6 V20 A2 2 0 0 1 19 22 H5 A2 2 0 0 1 3 20 V6 A2 2 0 0 1 5 4 Z M3 10h18" fill="TRANSPARENT" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.6" />
+                                                                    </graphic>
+                                                                </Label>
+                                                                <DatePicker fx:id="datePicker" editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="1000.0" styleClass="my-double-border" />
+                                                                <Label fx:id="dateErrorLabel" alignment="TOP_LEFT" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="347.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                                    <VBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <StackPane GridPane.columnIndex="2">
+                                                            <children>
+                                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                    <children>
+                                                                        <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Time *" translateY="2.0">
+                                                                            <padding>
+                                                                                <Insets bottom="1.0" left="5.0" />
+                                                                            </padding>
+                                                                        </Label>
+                                                                        <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <TextField fx:id="startTime" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" promptText="Start at" styleClass="my-double-border" translateY="2.0" />
+                                                                                <Label prefHeight="40.0" style="-fx-font-weight: 900; -fx-font-size: 25px;" text="-" textAlignment="CENTER" translateY="-2.0">
+                                                                                    <font>
+                                                                                        <Font size="25.0" />
+                                                                                    </font>
+                                                                                </Label>
+                                                                                <TextField fx:id="endTime" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" promptText="End at" styleClass="my-double-border" translateY="2.0" />
+                                                                            </children>
+                                                                        </HBox>
+                                                                        <Label fx:id="timeErrorLabel" alignment="TOP_LEFT" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="262.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="* The start time must be in the format HH:mm (e.g., 09:30)." textOverrun="WORD_ELLIPSIS" translateY="-5.0" visible="false" wrapText="true">
+                                                                            <VBox.margin>
+                                                                                <Insets left="5.0" />
+                                                                            </VBox.margin>
+                                                                        </Label>
+                                                                    </children>
+                                                                </VBox>
+                                                                <Label fx:id="timeWarnLabel" alignment="CENTER" prefHeight="21.0" prefWidth="285.0" style="-fx-font-size: 18px; -fx-font-weight: 900; -fx-text-fill: red;" text="You must pick a Date first" translateY="-5.0">
+                                                                    <padding>
+                                                                        <Insets bottom="1.0" left="5.0" />
+                                                                    </padding>
+                                                                </Label>
+                                                            </children>
+                                                        </StackPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox layoutX="30.0" layoutY="103.0">
+                                            <children>
+                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Location *">
+                                                    <VBox.margin>
+                                                        <Insets bottom="1.0" left="5.0" />
+                                                    </VBox.margin>
+                                                    <graphic>
+                                                        <SVGPath content="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0 M15 10 a 3 3 0 1 1 -6 0 a 3 3 0 1 1 6 0" fill="TRANSPARENT" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.6" />
+                                                    </graphic>
+                                                </Label>
+                                                <TextField fx:id="locationField" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" promptText="Venue name or adress" styleClass="my-double-border">
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </TextField>
+                                                <Label fx:id="locationErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                    <VBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="-7.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox layoutX="30.0" layoutY="398.0">
+                                            <children>
+                                                <GridPane>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="76.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="City *">
+                                                                    <padding>
+                                                                        <Insets bottom="1.0" left="5.0" />
+                                                                    </padding>
+                                                                </Label>
+                                                                <TextField fx:id="city" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" promptText="e.g. New York" styleClass="my-double-border" />
+                                                                <Label fx:id="cityErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                                    <VBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                                            <children>
+                                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Event Type *">
+                                                                    <padding>
+                                                                        <Insets bottom="1.0" left="5.0" />
+                                                                    </padding>
+                                                                </Label>
+                                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                    <children>
+                                                                        <ComboBox fx:id="eventType" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="1000.0" styleClass="my-double-border" />
+                                                                    </children>
+                                                                </HBox>
+                                                                <Label fx:id="eventTypeErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                                    <VBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox layoutX="30.0" layoutY="180.0">
+                                            <children>
+                                                <Label alignment="CENTER" prefWidth="825.0" style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Interests *" textAlignment="CENTER">
+                                                    <padding>
+                                                        <Insets bottom="1.0" left="5.0" />
+                                                    </padding>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="795.0" style="-fx-font-size: 10px; -fx-font-weight: 500; -fx-border-color: #636a75; -fx-border-width: 0 0 0.2 0;" text="Select the interests associated to your Event" textAlignment="CENTER" textFill="#636a75">
+                                                    <font>
+                                                        <Font size="9.0" />
+                                                    </font>
+                                                    <VBox.margin>
+                                                        <Insets left="40.0" right="40.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                                <VBox fx:id="interestsBox" alignment="TOP_CENTER" style="-fx-border-radius: 5; -fx-border-color: #636a75; -fx-border-width: 0 0.2 0.2 0.2;">
+                                                    <children>
+                                                        <FlowPane fx:id="interestsFlow" alignment="TOP_CENTER" columnHalignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="91.0">
+                                                            <padding>
+                                                                <Insets left="40.0" right="40.0" top="10.0" />
+                                                            </padding>
+                                                            <VBox.margin>
+                                                                <Insets left="40.0" right="40.0" />
+                                                            </VBox.margin>
+                                                        </FlowPane>
+                                                        <Label fx:id="interestsLabel" alignment="CENTER" style="-fx-text-fill: #636a75; -fx-font-size: 13px; -fx-font-weight: 600;" text="Selected: 0 interests" textAlignment="CENTER" />
+                                                    </children>
+                                                </VBox>
+                                                <Label fx:id="interestsErrorLabel" alignment="CENTER" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." textAlignment="CENTER" translateY="-1.0" visible="false">
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+
+                                                  <VBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox layoutX="30.0" layoutY="103.0">
+                                            <children>
+                                                <GridPane>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Description *">
+                                                            <GridPane.margin>
+                                                                <Insets bottom="1.0" left="5.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                        <Button fx:id="aiButton" alignment="CENTER_RIGHT" disable="true" mnemonicParsing="false" onAction="#onAiButtonClicked" styleClass="join-button-discover-page" text="Generate with AI" textAlignment="RIGHT" visible="false" GridPane.columnIndex="1">
+                                                            <GridPane.margin>
+                                                                <Insets bottom="1.0" right="5.0" />
+                                                            </GridPane.margin>
+                                                            <graphic>
+                                                                <SVGPath content="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z M20 3v4 M22 5h-4 M4 17v2 M5 18H3" fill="TRANSPARENT" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.2" />
+                                                            </graphic>
+                                                            <cursor>
+                                                                <Cursor fx:constant="OPEN_HAND" />
+                                                            </cursor>
+                                                        </Button>
+                                                    </children>
+                                                </GridPane>
+                                                <TextArea fx:id="eventDescription" prefHeight="169.0" prefWidth="544.0" promptText="Describe your event, what attendees can expect... or use A1 to generate promotional text" styleClass="my-double-border" wrapText="true" />
+                                                <Label fx:id="descriptionErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" text="The field Event Title is mandatory." translateY="-5.0" visible="false">
+                                                    <VBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <VBox layoutX="30.0" layoutY="398.0">
+                                            <children>
+                                                <GridPane>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="76.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Maximum Attendees">
+                                                                    <padding>
+                                                                        <Insets bottom="1.0" left="5.0" />
+                                                                    </padding>
+                                                                    <graphic>
+                                                                        <SVGPath content="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M 13 7 A 4 4 0 1 1 5 7 A 4 4 0 1 1 13 7 ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" fill="TRANSPARENT" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.6" />
+                                                                    </graphic>
+                                                                </Label>
+                                                                <Spinner fx:id="maximumAttendees" editable="true" prefHeight="40.0" prefWidth="1000.0" styleClass="my-double-border" />
+                                                                <Label disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" style="-fx-font-weight: 900; -fx-text-fill: red;" visible="false" />
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                                            <children>
+                                                                <HBox fx:id="eventImageHBox">
+                                                                    <children>
+                                                                        <Label style="-fx-font-size: 14px; -fx-font-weight: 500;" text="Event Image">
+                                                                            <padding>
+                                                                                <Insets bottom="1.0" left="5.0" />
+                                                                            </padding>
+                                                                            <graphic>
+                                                                                <SVGPath content="M 5 3 H 19 A 2 2 0 0 1 21 5 V 19 A 2 2 0 0 1 19 21 H 5 A 2 2 0 0 1 3 19 V 5 A 2 2 0 0 1 5 3 Z M 11 9 A 2 2 0 1 1 7 9 A 2 2 0 1 1 11 9 Z M 21 15 l -3.086 -3.086 a 2 2 0 0 0 -2.828 0 L 6 21" fill="TRANSPARENT" scaleX="0.8" scaleY="0.8" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.6" />
+                                                                            </graphic>
+                                                                        </Label>
+                                                                        <SegmentedButton fx:id="imageSourceToggleGroup" maxHeight="-Infinity" minHeight="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="22.0" translateX="64.0">
+                                                                            <buttons>
+                                                                                <ToggleButton fx:id="urlSelect" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="45.0" styleClass="my-double-border-segmented-left" text="URL" textAlignment="CENTER">
+                                                                                    <padding>
+                                                                                        <Insets bottom="1.0" left="2.0" />
+                                                                                    </padding>
+                                                                                </ToggleButton>
+                                                                                <ToggleButton fx:id="fileSelect" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="45.0" selected="true" styleClass="my-double-border-segmented-right" text="File">
+                                                                                    <padding>
+                                                                                        <Insets bottom="1.0" right="2.0" />
+                                                                                    </padding>
+                                                                                </ToggleButton>
+                                                                            </buttons>
+                                                                            <cursor>
+                                                                                <Cursor fx:constant="OPEN_HAND" />
+                                                                            </cursor>
+                                                                        </SegmentedButton>
+                                                                    </children>
+                                                                </HBox>
+                                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                    <children>
+                                                                        <StackPane fx:id="fileChooserArea" prefHeight="40.0" prefWidth="288.0">
+                                                                            <children>
+                                                                                <Button fx:id="uploadButton" maxHeight="-Infinity" minHeight="-Infinity" onAction="#setupFileChooser" prefHeight="40.0" prefWidth="1000.0" styleClass="my-double-border" text="Upload Image" />
+                                                                                <TextField fx:id="imageURL" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="1000.0" promptText="Image Url" styleClass="my-double-border" visible="false" />
+                                                                            </children>
+                                                                        </StackPane>
+                                                                    </children>
+                                                                </HBox>
+                                                                <Label fx:id="imageErrorLabel" disable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" prefWidth="341.0" style="-fx-font-weight: 900; -fx-text-fill: red;" visible="false" />
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.666748046875" minWidth="10.0" percentWidth="70.0" prefWidth="409.3333333333333" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.666748046875" minWidth="10.0" percentWidth="5.0" prefWidth="409.3333333333333" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.33331298828125" minWidth="10.0" percentWidth="25.0" prefWidth="135.33333333333331" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Button fx:id="createButton" mnemonicParsing="false" onAction="#handleCreateEvent" prefHeight="1000.0" prefWidth="1000.0" style="-fx-font-weight: 700; -fx-font-size: 13px;" styleClass="continue-button" text="Create Event" textFill="WHITE">
+                                                    <cursor>
+                                                        <Cursor fx:constant="OPEN_HAND" />
+                                                    </cursor>
+                                                </Button>
+                                                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="1000.0" prefWidth="1000.0" style="-fx-font-weight: 700; -fx-font-size: 13px;" styleClass="join-button-discover-page" text="Cancel" GridPane.columnIndex="2">
+                                                    <cursor>
+                                                        <Cursor fx:constant="OPEN_HAND" />
+                                                    </cursor>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="15.0" />
+                                            </VBox.margin>
+                                        </GridPane>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

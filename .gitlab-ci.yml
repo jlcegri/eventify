@@ -1,0 +1,64 @@
+# GitLab CI/CD Pipeline Configuration
+# This file defines the continuous integration and deployment pipeline for a Java Maven project.
+# It includes building the application, running tests, and performing code quality checks.
+# The pipeline is triggered on commits to the QA and main branches.
+
+stages:
+  - build
+  - test
+
+  # Define a reusable script to setup the graphics environment
+.javafx-env: &javafx-env
+  before_script:
+    - apt-get update
+    - apt-get install -y libx11-6 libxext6 libxrender1 libxtst6 libxi6 libgtk-3-0 xvfb
+
+build:
+  # Build job: Compiles, packages, and deploys the Java application using Maven
+  stage: build
+  image: maven:3.9.11
+  # Apply the environment setup here if 'package' runs tests,
+  # otherwise add '-DskipTests' to the mvn command below.
+  <<: *javafx-env
+  script:
+    - export NEW_VERSION=${CI_COMMIT_SHA:0:8}-${CI_COMMIT_REF_NAME}
+    - mvn versions:set -DnewVersion=1-$NEW_VERSION
+    - mkdir -p teste
+    - xvfb-run mvn clean package deploy -s ci_settings.xml
+  artifacts:
+    paths:
+      - target/*.jar
+  only:
+    - QA
+    - main
+
+unit-test-job:
+  # Unit Test Job: Executes unit tests and generates JUnit reports
+  image: maven:3.9.11
+  stage: test
+  <<: *javafx-env # Installs the missing libraries
+  script:
+    - echo "Running unit tests..."
+    - xvfb-run mvn test
+  artifacts:
+    when: always
+    reports:
+      junit: target/surefire-reports/*.xml
+
+# Global variables for the pipeline
+variables:
+  SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
+  GIT_DEPTH: "0"
+sonarcloud-check:
+  # SonarCloud Check: Performs static code analysis for quality and security
+  image: maven:3.9.11
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  stage: test
+  <<: *javafx-env
+  script:
+    - echo "Running SonarCloud analysis.."
+    - xvfb-run mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=group-31-gps_gps2526_g31
+

@@ -1,0 +1,700 @@
+.event-card {
+    -fx-background-radius: 10px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 2);
+}
+
+.textField {
+    -fx-border-color: #7c3bed, black;
+
+}
+
+.filters {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-border-radius: 5;
+    -fx-font-size: 12px;
+}
+
+.filters2 {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-border-radius: 5 0 0 5;
+    -fx-font-size: 12px;
+}
+
+.filters3 {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-border-radius: 0 5 5 0;
+    -fx-font-size: 12px;
+}
+
+.view-details-button {
+    -fx-background-color: #7c3bed;
+    -fx-background-radius: 7px;
+    -fx-font-weight: 500;
+    -fx-border-width: 0.5px;
+    -fx-border-color: transparent;
+    -fx-pref-height: 30px;
+}
+
+.view-details-button:hover {
+    -fx-background-color: #894eef;
+}
+
+.join-button-discover-page {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-color: #636a75;
+    -fx-border-radius: 7px;
+    -fx-border-width: 0.5px;
+    -fx-font-weight: 600;
+    -fx-pref-height: 30px;
+}
+
+.my-double-border {
+    -fx-border-color: TRANSPARENT, gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 11, 8;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+}
+
+.join-button-discover-page:hover {
+    -fx-background-color: #7c3bed;
+    -fx-background-radius: 7px;
+    -fx-text-fill: white;
+    -fx-border-color: TRANSPARENT;
+}
+
+.join-button-discover-page-hovered {
+    -fx-background-color: #7c3bed;
+    -fx-background-radius: 7px;
+    -fx-text-fill: white;
+    -fx-border-color: TRANSPARENT;
+}
+
+.my-double-border .content {
+    -fx-border-color: TRANSPARENT;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+.my-double-border:focused {
+    -fx-border-color: #7c3bed, 	gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 11, 8;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-segmented-left {
+    -fx-border-color: TRANSPARENT, gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 11 1 1 11, 8 1 1 8;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0 0 0 0, 4 0 4 4;
+}
+
+.my-double-border-segmented-right {
+    -fx-border-color: TRANSPARENT, gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 1 11 11 1, 1 8 8 1;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0 0 0 0, 4 4 4 0;
+}
+
+.my-double-border-segmented-left:hover {
+    -fx-border-color: TRANSPARENT, 	gray;
+    -fx-background-color: rgba(99, 106, 117, 0.2);
+    -fx-background-insets: 4 0 4 3;
+    -fx-background-radius: 11 1 1 11;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-segmented-right:hover {
+    -fx-border-color: TRANSPARENT, 	gray;
+    -fx-background-color: rgba(99, 106, 117, 0.2);
+    -fx-background-insets: 4 3 4 0;
+    -fx-background-radius: 1 11 11 1;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-segmented-left:selected {
+    -fx-border-color: #7c3bed, 	gray;
+    -fx-background-color: #7c3bed;
+    -fx-background-insets: 0;
+    -fx-background-radius: 11 1 1 11;
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-segmented-right:selected {
+    -fx-border-color: #7c3bed, 	gray;
+    -fx-background-color: #7c3bed;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1 11 11 1;
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-invalid {
+    -fx-border-color: TRANSPARENT, red;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 11, 8;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+}
+
+.my-double-border-invalid .content {
+    -fx-border-color: TRANSPARENT;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+.my-double-border-invalid:focused {
+    -fx-border-color: #7c3bed, 	red;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, .2;
+    -fx-border-radius: 11, 8;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-buttons {
+    -fx-border-color: TRANSPARENT, gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, 0.2;
+    -fx-border-radius: 100, 100;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+    -fx-padding: 0px;
+}
+
+.my-double-border-buttons:hover {
+    -fx-border-color: #7c3bed, 	gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 2, 0.2;
+    -fx-border-radius: 100, 100;
+    -fx-background-radius: 5;
+    -fx-border-insets: 0, 4;
+    -fx-padding: 0px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-buttons:pressed {
+    -fx-border-color: #7c3bed, 	transparent;
+    -fx-background-color: #7c3bed;
+    -fx-border-width: 2, 0.2;
+    -fx-border-radius: 100, 100;
+    -fx-background-radius: 100;
+    -fx-border-insets: 0, 4;
+    -fx-padding: 0px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-buttons-filled:hover {
+    -fx-border-color: #7c3bed;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-buttons-filled {
+    -fx-border-color: transparent;
+    -fx-background-color: WHITE;
+    -fx-background-radius: 13;
+    -fx-border-insets: -2;
+    -fx-border-width: 3;
+    -fx-border-radius: 11;
+    -fx-text-fill: black;
+    -fx-stroke: black;
+}
+
+.my-double-border-buttons-filled:pressed {
+    -fx-border-color: #7c3bed;
+    -fx-background-color: #7c3bed;
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.editSVG,.camSVG {
+    -fx-text-fill: black;
+    -fx-stroke: black;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+}
+
+.my-double-border-buttons-filled:pressed .label {
+    -fx-text-fill: white;
+}
+
+.my-double-border-buttons-filled:pressed .editSVG {
+    -fx-stroke: white;
+}
+
+.my-double-border-buttons-filled:pressed .camSVG {
+    -fx-stroke: white;
+}
+
+.my-double-border-buttons-filled.saveButton {
+    -fx-border-color: transparent;
+    -fx-background-color: WHITE;
+    -fx-background-radius: 13;
+    -fx-border-insets: -2;
+    -fx-border-width: 3;
+    -fx-border-radius: 11;
+    -fx-text-fill: black;
+    -fx-stroke: black;
+}
+
+.my-double-border-buttons-filled.saveButton:hover {
+    -fx-border-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.my-double-border-buttons-filled.saveButton:pressed {
+    -fx-border-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-text-fill: white;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.editSVG,.camSVG {
+    -fx-text-fill: black;
+    -fx-stroke: black;
+}
+
+.my-double-border-buttons-filled.saveButton:pressed .label {
+    -fx-text-fill: white;
+}
+
+.my-double-border-buttons-filled.saveButton:pressed .editSVG {
+    -fx-stroke: white;
+}
+
+.my-double-border-buttons-filled.saveButton:pressed .camSVG {
+    -fx-stroke: white;
+}
+
+.back-button {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 0.5px;
+    -fx-border-color: #864eed7f;
+    -fx-border-radius: 5;
+    -fx-font-size: 12px;
+}
+
+.back-button:hover {
+    -fx-background-color: #894eef;
+    -fx-border-color: #894eef;
+}
+
+.continue-button {
+    -fx-background-color:  radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-radius: 7px;
+    -fx-font-weight: 500;
+}
+
+
+
+.toggle-buttons-edit-profile {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+}
+
+.toggle-buttons-edit-profile:hover {
+    -fx-background-color: f2ebfd;
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+}
+
+.toggle-buttons-edit-profile:pressed {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 1 0 1 0;
+
+}
+
+.toggle-buttons-edit-profile:selected {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+    -fx-background-insets: 1 0 1 0;
+    -fx-text-fill: white;
+}
+
+.toggle-buttons-edit-profile:selected .label {
+    -fx-text-fill: white;
+}
+
+.toggle-buttons-edit-profile:pressed .infoSVG {
+    -fx-stroke: white;
+    -fx-fill: white;
+}
+
+.edit-button-profile {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+}
+
+.edit-button-profile .label {
+    -fx-text-fill: black;
+}
+
+.edit-button-profile:hover {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-border-color: transparent;
+}
+
+.edit-button-profile:hover .label {
+    -fx-text-fill: white;
+}
+
+.edit-button-profile:pressed {
+    -fx-text-fill: white;
+}
+
+.edit-button-profile:pressed .infoSVG {
+    -fx-fill: white;
+    -fx-stroke: white;
+}
+
+.label-toggle-buttons-edit-profile {
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+}
+
+.toggle-buttons-event-creation {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.1px;
+    -fx-border-radius: 8px;
+    -fx-pref-height: 15px;
+    -fx-max-height: 15px;
+    -fx-min-height: 15px;
+}
+
+.toggle-buttons-event-creation:hover {
+    -fx-background-color: f2ebfd;
+    -fx-background-radius: 8px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.1px;
+    -fx-border-radius: 8px;
+}
+
+.toggle-buttons-event-creation:selected {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-radius: 8px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.1px;
+    -fx-border-radius: 8px;
+    -fx-text-fill: white;
+}
+
+.label-toggle-buttons-event-creation {
+    -fx-font-size: 8px;
+    -fx-font-weight: 600;
+}
+
+
+.label-toggle-buttons-edit-profile-selected {
+    -fx-font-size: 10px;
+    -fx-font-weight: 700;
+    -fx-fill: white;
+}
+
+.pastStepsSHOW {
+    -fx-fill:  #16a249;
+}
+
+.currentStepsSHOW {
+    -fx-fill:  radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+}
+
+.nextStepsSHOW {
+    -fx-fill:  #d6d6d680;
+}
+
+.label-event-types {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-background-radius: 10px;
+    -fx-border-color: gray;
+    -fx-border-width: 0.2px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-font-size: 10px;
+}
+
+
+.iteractive-buttons-eventDetails {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 0px;
+}
+
+.iteractive-buttons-eventDetails:hover {
+    -fx-background-color: #894eef;
+    -fx-border-color: #894eef;
+}
+
+.iteractive-buttons-create {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 0px;
+    -fx-text-fill: white;
+    -fx-stroke: white;
+    -fx-font-size: 12px;
+}
+
+.iteractive-buttons-create-label {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: 0px;
+    -fx-text-fill: white;
+    -fx-stroke: white;
+    -fx-font-size: 12px;
+}
+
+.iteractive-buttons-create:hover {
+    -fx-background-color: #ffffff3f;
+    -fx-border-color: #894eef;
+    -fx-background-radius: 10px;
+}
+
+.box-border {
+    -fx-border-color: gray;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-width: .2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.tab-buttons-view-profile {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-radius: 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #999999;
+}
+
+.tab-buttons-view-profile:selected {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-text-fill: black;
+}
+
+/* === TextArea === */
+
+/* Targets the main control's border and background */
+.text-area {
+    -fx-background-color: transparent;
+    -fx-padding: 0.9;
+
+    /* Removes the blue focus glow */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Targets the inner content area */
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+
+/* === Spinner === */
+
+/* Targets the text-field *inside* the spinner */
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Removes the blue focus glow from the inner text field */
+.spinner:focused .text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* (Optional) Makes the arrow buttons transparent too */
+.spinner .increment-arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0.2 0.2;
+    -fx-border-color: gray;
+}
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.2 0 0 0.2;
+    -fx-border-color: gray;
+}
+
+
+/* === DatePicker === */
+
+/* Targets the text-field *inside* the date picker */
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Removes the blue focus glow from the inner text field */
+.date-picker:focused .text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* (Optional) Makes the calendar button transparent too */
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 0.2;
+    -fx-border-color: gray;
+}
+/*
+.context-menu {
+    -fx-pref-width: 122px;
+    -fx-min-width: 122px;
+}*/
+
+
+/* Landing Page Stylesheet*/
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: white;
+    /* Definir o gradiente numa variável para reutilizar (opcional, mas boa prática) */
+    -fx-color-gradient: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+}
+
+/* Logótipo "E"*/
+.logo-circle {
+    -fx-fill: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-stroke: transparent;
+}
+
+.logo-text {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+/* Títulos (Texto com Gradiente Linear) */
+.title-label {
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+    -fx-text-fill: linear-gradient(to right, #763dee, #364cf4);
+}
+
+.subtitle-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #636a75;
+}
+
+/* Botão Primário (O gradiente exato do "Create Event") */
+.primary-button {
+    -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 17.7122% 33.4385%, radius 72.9008%, #763dee 0.0%, #763dee 47.651%, #5a43f0 80.9843%, #364cf4 100.0%);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(118, 61, 238, 0.3), 10, 0, 0, 4);
+}
+
+.primary-button:hover {
+    -fx-opacity: 0.9;
+}
+
+
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #5a43f0;
+    -fx-border-radius: 8;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #5a43f0;
+    -fx-font-weight: bold;
+    -fx-padding: 9 20;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #f0f0ff;
+}
+
+
+.input-field-container {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+    -fx-border-width: 1;
+}
+
+
+.input-field-container-focused {
+    -fx-background-color: white;
+    -fx-border-color: #5a43f0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(90, 67, 240, 0.1), 5, 0, 0, 2);
+}
+
+.text-field-transparent {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 5;
+    -fx-prompt-text-fill: #999;
+    -fx-text-fill: #333;
+}
+
+.link-text {
+    -fx-text-fill: #5a43f0;
+    -fx-cursor: hand;
+    -fx-underline: false;
+    -fx-font-weight: bold;
+}
+
+.link-text:hover {
+    -fx-underline: true;
+}
